@@ -3,7 +3,6 @@ package com.mopub.mobileads;
 import android.content.Context;
 import android.util.Log;
 
-import com.mediabrix.android.MediaBrix;
 import com.mediabrix.android.api.IAdEventsListener;
 import com.mediabrix.android.api.MediabrixAPI;
 
@@ -26,7 +25,6 @@ public class MediaBrixIntersitials extends CustomEventInterstitial implements IA
                                     Map<String, Object> localExtras, Map<String, String> serverExtras) {
         this.context = context;
         this.interstitialListener = customEventInterstitialListener;
-
         MediabrixAPI.getInstance().onResume(this.context);
         MediabrixAPI.getInstance().initialize(this.context, BASE_URL, APP_ID, this);
 
@@ -35,11 +33,12 @@ public class MediaBrixIntersitials extends CustomEventInterstitial implements IA
     @Override
     protected void showInterstitial() {
         MediabrixAPI.getInstance().show(context, RALLY);
-        interstitialListener.onInterstitialShown();
+
     }
 
     @Override
     protected void onInvalidate() {
+
         MediabrixAPI.getInstance().onDestroy(this.context);
     }
 
@@ -51,6 +50,7 @@ public class MediaBrixIntersitials extends CustomEventInterstitial implements IA
     @Override
     public void onAdClosed(String s) {
         interstitialListener.onInterstitialDismissed();
+        MediabrixAPI.reset();
     }
 
     @Override
@@ -70,6 +70,13 @@ public class MediaBrixIntersitials extends CustomEventInterstitial implements IA
 
     @Override
     public void onAdShown(String s) {
-
+        interstitialListener.onInterstitialShown();
     }
+
+    @Override
+    public void onAdClicked(String s) {
+       interstitialListener.onInterstitialClicked();
+    }
+
+
 }
