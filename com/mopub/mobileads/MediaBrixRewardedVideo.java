@@ -85,7 +85,6 @@ public class MediaBrixRewardedVideo extends CustomEventRewardedVideo implements 
 
     @Override
     public void onAdClicked(String s){
-        RewardedVideo.click += 1;
         MoPubRewardedVideoManager.onRewardedVideoClicked(MediaBrixRewardedVideo.class, RESCUE);
     }
 
