@@ -1,4 +1,6 @@
 #MediaBrix Android MoPub Adapter
+##Please see "Testing / Release Settings" section for new guidelines on testing and deploying your integration.
+
 MediaBrix has created a MoPub adapter that allows publishers, using MoPub as their central ad server, to mediate the MediaBrix network as another demand source.  This is done by setting up MediaBrix as a Custom Native Network in MoPub.
 
 ***NOTE: The Android MoPub Adapter can only be used for one product in your integration. We do not support the use of Interstitial and Rewarded Video at the same time.***
@@ -145,3 +147,19 @@ dependencies {
 ![Step 14](https://cdn.mediabrix.com/o38%2Fdevsupportportal%2FMoPub%20Adapter%20Images%2F2016_03_07_17_09_439.png)
 
 **Step 15:** Add other desired targeting and Save Order
+
+###Testing / Release Settings
+
+To facilitate integrations and QA around the globe, MediaBrix has deployed an open Base URL for all of our world wide network partners to use while testing the MediaBrix SDK. This Test Base URL will eliminate the need for proxying your device to the US and ensure your app receives 100% fill during testing.
+
+* **Test Base URL:** `https://test-mobile.mediabrix.com/v2/manifest/`
+
+* **Production Base URL:** `https://mobile.mediabrix.com/v2/manifest/`
+
+`https://test-mobile.mediabrix.com/v2/manifest/` should **ONLY** be used for testing purposes, as it will not deliver live campaigns to your app.
+
+You can edit the Base URL for testing in "MediaBrixInterstitial.java":
+
+```private final String baseURL = "BASE_URL";```
+
+It is important to ensure that after testing, the Release build of your app uses the Production Base URL. **If you release your app using the Test Base URL, your app will not receive payable MediaBrix ads.**
