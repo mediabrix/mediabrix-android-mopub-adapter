@@ -113,7 +113,7 @@ dependencies {
 
 ![Step 4](https://cdn.mediabrix.com/o38%2Fdevsupportportal%2FMoPub%20Adapter%20Images%2F2016_03_07_16_44_344.png)
 
-**Step 5:** Find your app, and add **"com.mopub.mobileads.MediaBrixInterstitial"** or **"com.mopub.mobileads.MediaBrixRewardedVideo"** into **"CustomEventClass"** field for fullscreen ads
+**Step 5:** Find your app, and add **"com.mopub.mobileads.MediaBrixInterstitial"** or **"com.mopub.mobileads.MediaBrixRewardedVideo"** into **"CustomEventClass"** field for fullscreen/reward ads
 
 **Step 6:** In **Custom Event Class Data** copy the following:
 
@@ -141,7 +141,7 @@ dependencies {
 
 ![Step 13](https://cdn.mediabrix.com/o38%2Fdevsupportportal%2FMoPub%20Adapter%20Images%2F2016_03_07_17_06_418.png)
 
-**Step 14:** Within Ad Unit Targeting, select the fullscreen ad units where you added the Custom Event Class in Step 5
+**Step 14:** Within Ad Unit Targeting, select the fullscreen/reward ad units where you added the Custom Event Class in Step 5
 
 ![Step 14](https://cdn.mediabrix.com/o38%2Fdevsupportportal%2FMoPub%20Adapter%20Images%2F2016_03_07_17_09_439.png)
 
