@@ -1,17 +1,17 @@
-#MediaBrix Android MoPub Adapter
+# MediaBrix Android MoPub Adapter
 
 MediaBrix has created a MoPub adapter that allows publishers, using MoPub as their central ad server, to mediate the MediaBrix network as another demand source.  This is done by setting up MediaBrix as a Custom Native Network in MoPub.
 
 ***NOTE: The Android MoPub Adapter can only be used for one product in your integration. We do not support the use of Interstitial and Rewarded Video at the same time.***
 
-##Prerequisites
+## Prerequisites
 * MediaBrix Appl_ID and Zone_Name(s)
 * MediaBrix SDK jar file ([download/clone here](https://github.com/mediabrix/mediabrix-android-sdk/tree/master/Android/SDK%20Files))
 * MoPub SDK jar file
 * GooglePlayservice (Android only.  Required for MoPub SDK)
 * Only tested on MoPub SDK version 4.0+.  Should work on earlier SDKs.  
 
-##Unity Projects
+## Unity Projects
 **Step 1:** Download MediaBrix_MoPubUnity.unitypackage from [here](https://github.com/mediabrix/mediabrix-android-mopub-adapter/tree/master/Unity)
 
 **Step 2:** Copy the MediaBrix_MoPubAdapter.jar and mediabrix-sdk-FBless.jar into the "Android/libs" folder.  Copy MediaBrixPlugin.cs and MediaBrixPluginAndroid.cs to same location where the script that is script requesting MoPub ads.
@@ -45,7 +45,7 @@ MediaBrix has created a MoPub adapter that allows publishers, using MoPub as the
 
 **Step 5:** Follow the steps in **MoPub Setup** located towards the end of the page.
 
-##Android Core Projects
+## Android Core Projects
 **Step 1:** Add the MediaBrix SDK to your project ([which can be found here](https://github.com/mediabrix/mediabrix-android-sdk/tree/master/Android/SDK%20Files))
 
 **Step 2:** Download **mediabrix-mopub-core.jar** from [here](https://github.com/mediabrix/mediabrix-android-mopub-adapter/tree/master/Android%20Core)
