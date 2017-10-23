@@ -80,14 +80,16 @@ dependencies {
 
 **Step 5:** In the activity that is requesting the rewarded video/interstitial ad add the following lines to your activity's ``onResume`` and ``onPause`` methods.
 
-````@Override
+````
+@Override
     public void onPause() {
         super.onPause();
         MediabrixAPI.getInstance().onPause(getApplicationContext());
     }
 ````
 
-````@Override
+````
+@Override
     public void onResume() {
         super.onResume();
 		MediabrixAPI.setDebug(true); // This method prints out logs from the MediaBrix SDK.
@@ -97,7 +99,7 @@ dependencies {
 ````
 
 
-##MoPub Setup
+## MoPub Setup
 
 **Step 1:** Login into your MoPub account
 
