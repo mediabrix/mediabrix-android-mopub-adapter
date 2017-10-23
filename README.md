@@ -18,30 +18,37 @@ MediaBrix has created a MoPub adapter that allows publishers, using MoPub as the
 
 **Step 3:** Copy the following below into your project's AndroidManifest.xml:
 
-``<activity
+```
+<activity
      android:name="com.mediabrix.android.service.AdViewActivity"
      android:configChanges="orientation|screenSize|keyboard"
      android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
-</activity>``
+</activity>
+```
 
-``<service
+```
+<service
       android:name="com.mediabrix.android.service.MediaBrixService" >
-</service> ``
+</service>
+```
 
 **Step 4:** Add the following in the script that requests Mopub's ads.
 
-``void Start(){
+```
+void Start(){
      MediabrixPlugin.Resume();
-}``
+}
+```
 
-``private void OnApplicationPause(bool pauseStatus) { 
+```
+private void OnApplicationPause(bool pauseStatus) { 
      if (pauseStatus) {
 	MediabrixPlugin.Pause();
      } else {
 	MediabrixPlugin.Resume();
      }        
 }
-``
+```
 
 **Step 5:** Follow the steps in **MoPub Setup** located towards the end of the page.
 
@@ -52,14 +59,15 @@ MediaBrix has created a MoPub adapter that allows publishers, using MoPub as the
 
 **Step 3:** Copy mediabrix-sdk-FBless.jar and mediabrix-mopub-core.jar into your project.
 *  Android Studio: 
-````
+
+```
 dependencies {
     compile 'com.android.support:support-v4:21.0.3'// This can be changed to
                                                    // whatever version you want  
     compile files('libs/mediabrix-sdk-FBless.jar') 
     compile files('libs/mediabrix-mopub-core.jar') 
 }
-````
+```
 
 * Eclipse:
   * Right Click your project, and select "Properties'
@@ -68,15 +76,19 @@ dependencies {
 
 **Step 4:** Copy the following below into your project's AndroidManifest.xml:
 
-``<activity
+```
+<activity
      android:name="com.mediabrix.android.service.AdViewActivity"
      android:configChanges="orientation|screenSize|keyboard"
      android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
-</activity>``
+</activity>
+```
 
-``<service
+```
+<service
       android:name="com.mediabrix.android.service.MediaBrixService" >
-</service> ``
+</service>
+```
 
 **Step 5:** In the activity that is requesting the rewarded video/interstitial ad add the following lines to your activity's ``onResume`` and ``onPause`` methods.
 
