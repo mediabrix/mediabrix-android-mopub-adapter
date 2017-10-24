@@ -5,7 +5,7 @@ MediaBrix has created a MoPub adapter that allows publishers, using MoPub as the
 ***NOTE: The Android MoPub Adapter (v1.8.2.001 and up) can now be used for both Rewarded Video and Interstitials concurrently.***
 
 ## Prerequisites
-* MediaBrix Appl_ID and Zone_Name(s)
+* MediaBrix App_ID and Zone_Name(s)
 * MediaBrix SDK jar file ([download/clone here](https://github.com/mediabrix/mediabrix-android-sdk/tree/master/Android/SDK%20Files))
 * MoPub SDK jar file
 * GooglePlayservice (Android only.  Required for MoPub SDK)
