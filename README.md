@@ -2,7 +2,7 @@
 
 MediaBrix has created a MoPub adapter that allows publishers, using MoPub as their central ad server, to mediate the MediaBrix network as another demand source.  This is done by setting up MediaBrix as a Custom Native Network in MoPub.
 
-***NOTE: The Android MoPub Adapter (v1.8.2.001 and up) can now be used for both Rewarded Video and Interstitials concurrently.***
+***NOTE: The Android MoPub Adapter (v1.8.2.002 and up) can now be used for both Rewarded Video and Interstitials concurrently.***
 
 ## Prerequisites
 * MediaBrix App_ID and Zone_Name(s)
