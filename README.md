@@ -77,17 +77,18 @@ dependencies {
 **Step 4:** Copy the following below into your project's AndroidManifest.xml:
 
 ```
-<activity
-     android:name="com.mediabrix.android.service.AdViewActivity"
-     android:configChanges="orientation|screenSize|keyboard"
-     android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
-</activity>
-```
-
-```
-<service
-      android:name="com.mediabrix.android.service.MediaBrixService" >
-</service>
+  <activity
+    android:name="com.mediabrix.android.core.AdViewActivity"
+    android:configChanges="orientation|screenSize|keyboard"
+    android:hardwareAccelerated="true"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+  </activity>
+  <activity
+    android:name="com.mediabrix.android.core.ClickOutActivity"
+    android:configChanges="orientation|screenSize|keyboard"
+    android:hardwareAccelerated="true"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+  </activity>
 ```
 
 **Step 5:** In the activity that is requesting the rewarded video/interstitial ad add the following lines to your activity's ``onResume`` and ``onPause`` methods.
